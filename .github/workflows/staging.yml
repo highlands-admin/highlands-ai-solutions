@@ -1,0 +1,33 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  deploy:
+    name: Deploy to IONOS Staging FTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: SFTP Deploy
+        uses: wangyucode/sftp-upload-action@v3
+        with:
+          host: ${{ secrets.STAGING_FTP_SERVER }}
+          username: ${{ secrets.STAGING_FTP_USERNAME }}
+          password: ${{ secrets.STAGING_FTP_PASSWORD }}
+          port: 22
+          localDir: '.'
+          remoteDir: '/staging'
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            **/node_modules/**
+            .claude/**
+            .vercel/**
+            package.json
+            preview-server.js
