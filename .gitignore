@@ -1,0 +1,9 @@
+.vercel
+.env*.local
+.env
+.DS_Store
+node_modules/
+.claude/settings.local.json
+
+# Raw UHD source footage for hero-montage.mp4 (~118 MB, not referenced by the site)
+Hero Montage/

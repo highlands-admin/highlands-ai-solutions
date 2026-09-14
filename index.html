@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Highlands Solutions | Technology for Senior Living</title>
+    <meta
+      name="description"
+      content="Highlands Solutions builds technology for senior living communities, including Highlands Virtual Assist and Highlands Vital Connect. Solutions built by senior living owners, for senior living communities."
+    />
+    <meta property="og:title" content="Highlands Solutions | Technology for Senior Living" />
+    <meta property="og:description" content="Solutions built by senior living owners, for senior living communities." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="favicon.svg?v=3" type="image/svg+xml" />
+    <link rel="alternate icon" href="favicon.svg?v=3" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg?v=3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
+  <body>
+    <!-- Ambient background gradients (gives the site a fluid, non-flat feel) -->
+    <div class="ambient" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grain"></div>
+    </div>
+
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="#top" aria-label="Highlands Solutions home">
+          <img src="Highlands IT Solutions.png" alt="Highlands Solutions" class="brand-logo-img" />
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <div class="nav-item nav-has-dropdown">
+            <a href="#solutions" class="nav-trigger" aria-haspopup="true" aria-expanded="false">
+              Solutions <span class="caret" aria-hidden="true">▾</span>
+            </a>
+            <div class="nav-dropdown" role="menu">
+              <a href="solutions/virtual-assist.html" role="menuitem">
+                <span class="nav-dd-title">Highlands Virtual Assist</span>
+                <span class="nav-dd-sub">AI assistant &amp; lead capture for community sites</span>
+              </a>
+              <a href="solutions/vital-connect.html" role="menuitem">
+                <span class="nav-dd-title">Highlands Vital Connect</span>
+                <span class="nav-dd-sub">Resident wellness &amp; care coordination</span>
+              </a>
+              <a href="solutions/senior-snapsign.html" role="menuitem">
+                <span class="nav-dd-title">Senior SnapSign</span>
+                <span class="nav-dd-sub">Digital eSignature for senior move-ins</span>
+              </a>
+              <a href="solutions/web-marketing.html" role="menuitem">
+                <span class="nav-dd-title">Web &amp; Marketing</span>
+                <span class="nav-dd-sub">Websites, branding &amp; paid ads</span>
+              </a>
+            </div>
+          </div>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="button button-small" href="#contact">Book a Demo</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto">
+          <source src="hero-montage.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-bg">
+          <div class="hero-gradient"></div>
+        </div>
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <h1>
+              Solutions built by senior living owners,<br />
+              <em>for</em> senior living communities.
+            </h1>
+<div class="hero-actions">
+              <a class="cta" href="#contact">
+                <span class="cta-text">Book a Demo</span>
+                <span class="cta-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+              <a class="button button-ghost" href="#solutions">Explore Solutions</a>
+            </div>
+          </div>
+
+          <!-- Hero product mocks -->
+          <div class="hero-mocks reveal">
+            <div class="hero-mocks-stage">
+
+              <!-- 0: Virtual Assist -->
+              <aside class="hero-mock hero-mock-active" data-mock="0" aria-label="Highlands Virtual Assist">
+                <div class="chat-header">
+                  <div class="chat-avatar">
+                    <span class="pulse"></span>
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L4 18 L12 14 L20 18 Z" fill="currentColor"/></svg>
+                  </div>
+                  <div>
+                    <div class="chat-title">Community Assistant</div>
+                    <div class="chat-sub">Highlands Senior Living</div>
+                  </div>
+                  <span class="chat-close" aria-hidden="true">×</span>
+                </div>
+                <div class="chat-body">
+                  <div class="msg msg-bot">How can I help you today?</div>
+                  <div class="chat-chips">
+                    <button class="chip chip-active" type="button">Pricing</button>
+                    <button class="chip" type="button">Schedule a Visit</button>
+                  </div>
+                  <div class="msg msg-bot">Who are you researching senior living options for?</div>
+                  <div class="chat-options">
+                    <button class="opt" type="button">Myself</button>
+                    <button class="opt" type="button">A parent</button>
+                    <button class="opt" type="button">Spouse or Partner</button>
+                    <button class="opt" type="button">A friend</button>
+                  </div>
+                </div>
+                <div class="chat-input">
+                  <span>Type a message…</span>
+                  <span class="send" aria-hidden="true">↑</span>
+                </div>
+              </aside>
+
+              <!-- 1: Vital Connect -->
+              <div class="hero-mock" data-mock="1" aria-label="Highlands Vital Connect">
+                <div class="hm-head">
+                  <div class="hm-avatar">
+                    <svg viewBox="0 0 16 16" fill="none"><polyline points="1,8 4,8 6,3 8,13 10,6 12,9 15,9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <div>
+                    <div class="hm-title">Vital Connect</div>
+                    <div class="hm-sub">Room 204 · Margaret T.</div>
+                  </div>
+                  <span class="hm-badge hm-badge-ok">● Normal</span>
+                </div>
+                <div class="hm-body">
+                  <div class="hm-vitals-row">
+                    <div class="hm-vital">
+                      <span class="hm-vital-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 13S2 9 2 5.5a3.5 3.5 0 0 1 6-2.45A3.5 3.5 0 0 1 14 5.5C14 9 8 13 8 13z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+                      <span class="hm-vital-val">72</span>
+                      <span class="hm-vital-label">bpm</span>
+                    </div>
+                    <div class="hm-vital-div"></div>
+                    <div class="hm-vital">
+                      <span class="hm-vital-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1v7l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/></svg></span>
+                      <span class="hm-vital-val">7.2h</span>
+                      <span class="hm-vital-label">sleep</span>
+                    </div>
+                    <div class="hm-vital-div"></div>
+                    <div class="hm-vital">
+                      <span class="hm-vital-icon"><svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10M5 6l3-3 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                      <span class="hm-vital-val">4.2k</span>
+                      <span class="hm-vital-label">steps</span>
+                    </div>
+                  </div>
+                  <div class="hm-sparkline-wrap">
+                    <div class="hm-sparkline-label">Heart rate · last 24h</div>
+                    <svg class="hm-sparkline" viewBox="0 0 260 40" preserveAspectRatio="none">
+                      <polyline points="0,30 40,26 80,28 110,18 140,22 170,15 200,19 230,12 260,10" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+                      <polyline points="0,30 40,26 80,28 110,18 140,22 170,15 200,19 230,12 260,10" fill="none" stroke="rgba(14,185,166,0.85)" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="hm-notify">
+                    <span class="hm-notify-dot"></span>
+                    Family update sent · 2 hours ago
+                  </div>
+                </div>
+                <div class="hm-foot">
+                  <span>48 residents monitored</span>
+                  <span class="hm-btn">Dashboard →</span>
+                </div>
+              </div>
+
+              <!-- 2: Senior SnapSign -->
+              <div class="hero-mock" data-mock="2" aria-label="Senior SnapSign">
+                <div class="hm-head">
+                  <div class="hm-avatar">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M10.5 2.5l3 3-7 7H3.5v-3l7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 14h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </div>
+                  <div>
+                    <div class="hm-title">Senior SnapSign</div>
+                    <div class="hm-sub">M. Wilson · Room 14</div>
+                  </div>
+                  <span class="hm-badge">12 of 14</span>
+                </div>
+                <div class="hm-progress-wrap">
+                  <div class="hm-progress"><div class="hm-progress-bar" style="width:86%"></div></div>
+                  <span class="hm-progress-label">86%</span>
+                </div>
+                <div class="hm-body">
+                  <ul class="hm-doc-list">
+                    <li class="hm-done"><span class="hm-check">✓</span><span class="hm-doc-name">Residency Agreement</span><span class="hm-doc-date">Apr 22</span></li>
+                    <li class="hm-done"><span class="hm-check">✓</span><span class="hm-doc-name">HIPAA Authorization</span><span class="hm-doc-date">Apr 22</span></li>
+                    <li class="hm-done"><span class="hm-check">✓</span><span class="hm-doc-name">Care Plan Acknowledgment</span><span class="hm-doc-date">Apr 23</span></li>
+                    <li class="hm-signing"><span class="hm-pen">✎</span><span class="hm-doc-name">Financial Disclosure</span><span class="hm-doc-status">Awaiting</span></li>
+                    <li><span class="hm-empty">○</span><span class="hm-doc-name">Emergency Contacts</span></li>
+                  </ul>
+                </div>
+                <div class="hm-foot">
+                  <span>Auto-saved · 1 min ago</span>
+                  <span class="hm-btn">Continue →</span>
+                </div>
+              </div>
+
+              <!-- 3: Web & Marketing -->
+              <div class="hero-mock" data-mock="3" aria-label="Web and Marketing">
+                <div class="hm-head">
+                  <div class="hm-avatar">
+                    <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 2.5S6 5 6 8s2 5.5 2 5.5M8 2.5S10 5 10 8s-2 5.5-2 5.5M2.5 8h11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </div>
+                  <div>
+                    <div class="hm-title">Marketing Analytics</div>
+                    <div class="hm-sub">April 2025 · yourcommunity.com</div>
+                  </div>
+                  <span class="hm-badge hm-badge-ok">● Live</span>
+                </div>
+                <div class="hm-body">
+                  <div class="hm-stats-row">
+                    <div class="hm-stat">
+                      <span class="hm-stat-val">+42%</span>
+                      <span class="hm-stat-label">Tour requests</span>
+                    </div>
+                    <div class="hm-stat-div"></div>
+                    <div class="hm-stat">
+                      <span class="hm-stat-val">847</span>
+                      <span class="hm-stat-label">Visitors</span>
+                    </div>
+                    <div class="hm-stat-div"></div>
+                    <div class="hm-stat">
+                      <span class="hm-stat-val">3.2%</span>
+                      <span class="hm-stat-label">Conversion</span>
+                    </div>
+                  </div>
+                  <div class="hm-sparkline-wrap">
+                    <div class="hm-sparkline-label">Tour requests · last 30 days</div>
+                    <svg class="hm-sparkline" viewBox="0 0 260 40" preserveAspectRatio="none">
+                      <polyline points="0,38 40,34 80,30 110,26 140,22 170,17 200,13 230,9 260,6" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-linecap="round"/>
+                      <polyline points="0,38 40,34 80,30 110,26 140,22 170,17 200,13 230,9 260,6" fill="none" stroke="rgba(14,185,166,0.85)" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </div>
+                  <div class="hm-notify">
+                    <span class="hm-notify-dot"></span>
+                    12 active ad campaigns running
+                  </div>
+                </div>
+                <div class="hm-foot">
+                  <span>Search &amp; social · all campaigns</span>
+                  <span class="hm-btn">View Report →</span>
+                </div>
+              </div>
+
+            </div><!-- /hero-mocks-stage -->
+
+          </div><!-- /hero-mocks -->
+        </div>
+
+        <!-- Trust strip -->
+        <div class="container trust-strip reveal">
+          <span>Trusted by senior living teams across</span>
+          <div class="trust-items">
+            <span>Georgia</span><i></i>
+            <span>South Carolina</span><i></i>
+            <span>North Carolina</span><i></i>
+            <span>Florida</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTIONS — sierra.ai style cards -->
+      <section id="solutions" class="section section-solutions">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="kicker">Our Solutions</span>
+            <h2>Transform how your community connects, converts, and cares.</h2>
+            <p class="lede">
+              A growing suite of products, each engineered for the realities of senior living operations.
+            </p>
+          </header>
+
+          <div class="solution-grid">
+            <!-- Virtual Assist Card -->
+            <article class="sol-card reveal" data-accent="light">
+              <div class="sol-card-media">
+                <img src="Solutions Graphics/VA.jpg" alt="Highlands Virtual Assist" class="sol-card-img" />
+              </div>
+              <div class="sol-card-body">
+                <span class="sol-tag">Highlands Virtual Assist <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 3h12v7H5.5L2 13V3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="5.5" cy="6.5" r="0.75" fill="currentColor"/><circle cx="8" cy="6.5" r="0.75" fill="currentColor"/><circle cx="10.5" cy="6.5" r="0.75" fill="currentColor"/></svg></span>
+                <h3>Never miss a <em>lead</em> again.</h3>
+                <p>
+                  An AI assistant that drops onto your community website in minutes. It qualifies prospects, books tours inline, and alerts your team the moment a lead comes in.
+                </p>
+                <ul class="sol-features">
+                  <li><span>✓</span> Books tours directly in chat</li>
+                  <li><span>✓</span> Scores move-in readiness automatically</li>
+                  <li><span>✓</span> Real-time alerts &amp; CRM-ready exports</li>
+                  <li><span>✓</span> Unified prospects, conversations &amp; analytics dashboard</li>
+                </ul>
+                <a class="cta" href="solutions/virtual-assist.html">
+                  <span class="cta-text">Learn more</span>
+                  <span class="cta-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Vital Connect Card -->
+            <article class="sol-card reveal" data-accent="dark">
+              <div class="sol-card-media">
+                <img src="Solutions Graphics/Vital Connect.jpg" alt="Highlands Vital Connect" class="sol-card-img" />
+              </div>
+              <div class="sol-card-body">
+                <span class="sol-tag sol-tag-dark">Highlands Vital Connect <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><polyline points="1,8 4,8 6,3 8,13 10,6 12,9 15,9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <h3>Resident wellness, <em>always</em> in view.</h3>
+                <p>
+                  A connected platform that helps care teams stay close to every resident, bringing daily wellness signals, family communication, and care coordination into one calm interface.
+                </p>
+                <ul class="sol-features">
+                  <li><span>✓</span> Real-time resident wellness signals</li>
+                  <li><span>✓</span> Family-facing updates &amp; messaging</li>
+                  <li><span>✓</span> Coordinated care across staff and shifts</li>
+                  <li><span>✓</span> Built for HIPAA-aware operations</li>
+                </ul>
+                <a class="cta" href="solutions/vital-connect.html">
+                  <span class="cta-text">Learn more</span>
+                  <span class="cta-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Senior SnapSign Card -->
+            <article class="sol-card reveal" data-accent="light">
+              <div class="sol-card-media">
+                <img src="SeniorSnapSign%20Graphics/Move-in%20automation/Screenshot%202026-05-08%20095649.png"
+                     alt="Senior SnapSign document preparation"
+                     class="sol-card-img"
+                     style="object-position: top;" />
+              </div>
+              <div class="sol-card-body">
+                <span class="sol-tag">Senior SnapSign <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10.5 2.5l3 3-7 7H3.5v-3l7-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 14h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <h3>Move-in day, <em>minus</em> the paperwork.</h3>
+                <p>
+                  A digital eSignature solution that automates the senior move-in process. Every form, agreement, and disclosure delivered, signed, and stored in one place.
+                </p>
+                <ul class="sol-features">
+                  <li><span>✓</span> Replaces 400+ pages of physical paperwork</li>
+                  <li><span>✓</span> Family-friendly remote signing</li>
+                  <li><span>✓</span> Centralized resident document vault</li>
+                  <li><span>✓</span> Move-in workflows your team can ship in days</li>
+                </ul>
+                <a class="cta" href="solutions/senior-snapsign.html">
+                  <span class="cta-text">Learn more</span>
+                  <span class="cta-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Web & Marketing Card -->
+            <article class="sol-card reveal" data-accent="dark">
+              <div class="sol-card-media">
+                <img src="Solutions Graphics/MarketingLanding.jpg" alt="Web and Marketing" class="sol-card-img" />
+              </div>
+              <div class="sol-card-body">
+                <span class="sol-tag sol-tag-dark">Web &amp; Marketing <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 2.5S6 5 6 8s2 5.5 2 5.5M8 2.5S10 5 10 8s-2 5.5-2 5.5M2.5 8h11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+                <h3>Websites, branding, and advertising <em>for</em> senior living.</h3>
+                <p>
+                  A done-with-you partnership that gives your community a brand presence and lead engine, built by people who understand senior living.
+                </p>
+                <ul class="sol-features">
+                  <li><span>✓</span> Custom community websites</li>
+                  <li><span>✓</span> Brand identity &amp; collateral</li>
+                  <li><span>✓</span> Paid search &amp; social campaigns</li>
+                  <li><span>✓</span> Reporting tied to tour and move-in metrics</li>
+                </ul>
+                <a class="cta" href="solutions/web-marketing.html">
+                  <span class="cta-text">Learn more</span>
+                  <span class="cta-arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section section-about">
+        <div class="container about-grid">
+          <div class="about-copy reveal">
+            <span class="kicker">Who We Are</span>
+            <h2>Built by operators. Designed for caregivers.</h2>
+            <p>
+              Highlands Solutions is the technology arm of the Highlands Senior Living family. Every product we ship is shaped by people who have run communities, answered the after-hours calls, and watched a missed lead become a missed home for a family.
+            </p>
+            <p>
+              We build software that respects the pace of senior living: calm, capable, and quietly powerful.
+            </p>
+            <ul class="about-points">
+              <li><strong>Operator-led.</strong> Built inside a working senior living group.</li>
+              <li><strong>Care-first.</strong> Designed around residents and families.</li>
+              <li><strong>Modern stack.</strong> AI, automation, and analytics that just work.</li>
+            </ul>
+          </div>
+          <div class="about-visual reveal">
+            <img src="Solutions Graphics/WhoWeAre.jpg" alt="The Highlands team" class="about-visual-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ — twenty.com inspired dynamic background -->
+      <section id="faq" class="section section-faq">
+        <div class="faq-bg" aria-hidden="true">
+          <div class="faq-orb fo1"></div>
+          <div class="faq-orb fo2"></div>
+          <div class="faq-orb fo3"></div>
+        </div>
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="kicker">Any Questions?</span>
+            <h2>Everything you'd ask on the first call.</h2>
+          </header>
+          <div class="faq-list">
+            <details class="faq-item reveal" open>
+              <summary>How quickly can we go live?</summary>
+              <p>Most communities are live with Highlands Virtual Assist within a week. Vital Connect timelines depend on your existing systems and we'll scope it on the first call.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Do your products integrate with our CRM?</summary>
+              <p>Yes. Prospects and conversations are auto-organized and exportable to the CRMs senior living teams already use.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Is the chatbot really branded for our community?</summary>
+              <p>Every widget is themed with your community's colors, logo, and tone. It feels like an extension of your team, not a third-party bot.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>What does pricing look like?</summary>
+              <p>We price per community with volume tiers for groups. Reach out and we'll send a tailored quote within 24 hours.</p>
+            </details>
+            <details class="faq-item reveal">
+              <summary>Are you HIPAA-aware?</summary>
+              <p>Vital Connect is built with HIPAA-aware operations in mind. Virtual Assist captures only the lead information visitors choose to share.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section-contact">
+        <div class="contact-bg" aria-hidden="true">
+          <div class="contact-orb co1"></div>
+          <div class="contact-orb co2"></div>
+          <div class="contact-orb co3"></div>
+          <div class="contact-grid-texture"></div>
+        </div>
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <span class="kicker">Get In Touch</span>
+            <h2>See Highlands Solutions in your community.</h2>
+            <p>Book a 20-minute walkthrough. We'll show you the product, talk through your workflow, and send a tailored proposal the same week.</p>
+            <ul class="contact-list">
+              <li><span>✉</span> admin@highlands.care</li>
+              <li><span>☎</span> +1-(678)-313-3034</li>
+              <li><span>◷</span> Monday – Friday · 8am – 6pm ET</li>
+            </ul>
+          </div>
+          <form class="contact-form reveal" action="https://formspree.io/f/your-id" method="POST">
+            <div class="row">
+              <label>Name<input type="text" name="name" required /></label>
+              <label>Community<input type="text" name="community" required /></label>
+            </div>
+            <div class="row">
+              <label>Email<input type="email" name="email" required /></label>
+              <label>Phone<input type="tel" name="phone" /></label>
+            </div>
+            <label>What are you looking to solve?
+              <textarea name="message" rows="4" placeholder="Tell us a bit about your community and goals…"></textarea>
+            </label>
+            <button class="cta" type="submit">
+              <span class="cta-text">Request a Demo</span>
+              <span class="cta-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="foot-brand">
+          <img src="Highlands IT Solutions.png" alt="Highlands Solutions" class="foot-logo-img" />
+        </div>
+        <div class="foot-links">
+          <a href="#solutions">Solutions</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="foot-meta">© <span id="yr"></span> Highlands Solutions. Part of the Highlands Senior Living family.</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- SeniorChat Widget -->
+    <style>
+      #seniorchat-widget {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 320px;
+        height: 560px;
+        border: none;
+        z-index: 999999;
+        background: transparent;
+        pointer-events: none;
+      }
+    </style>
+    <iframe
+      id="seniorchat-widget"
+      src="https://close-sales-fast.base44.app/widget?widgetId=6a168a72fe06b4006569d97f"
+      allowtransparency="true"
+      scrolling="no"
+      onload="this.style.pointerEvents='all'">
+    </iframe>
+    <!-- End SeniorChat Widget -->
+  </body>
+</html>
