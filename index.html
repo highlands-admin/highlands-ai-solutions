@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=4" />
+    <link rel="stylesheet" href="styles.css?v=5" />
   </head>
   <body>
     <!-- Ambient background gradients (gives the site a fluid, non-flat feel) -->
@@ -286,7 +286,7 @@
       </section>
 
       <!-- WHY WE BUILT THIS -->
-      <section id="why" class="section">
+      <section id="why" class="section section-why">
         <div class="container">
           <header class="section-head reveal">
             <span class="kicker">Why We Built This</span>
@@ -296,10 +296,10 @@
             </p>
           </header>
           <div class="why-grid">
-            <div class="why-card reveal">
-              <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <h3>20 years behind</h3>
-              <p>Senior living adopts technology two decades after every other industry. Families arriving from a digital world notice.</p>
+            <div class="why-anchor reveal">
+              <span class="why-num" aria-hidden="true">20</span>
+              <h3>Senior living technology runs <em>two decades</em> behind.</h3>
+              <p>Every other industry got modern tools years ago. Families arriving from a digital world feel the gap the moment they visit, and we felt it every day as operators. It is the reason every Highlands product exists.</p>
             </div>
             <div class="why-card reveal">
               <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19M10 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM20 19v-1.5a3.5 3.5 0 0 0-2.5-3.35M15 4.15A3.5 3.5 0 0 1 15 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -332,8 +332,12 @@
 
       <!-- PURPOSE -->
       <section class="purpose-strip">
+        <div class="purpose-bg" aria-hidden="true">
+          <div class="purpose-orb po1"></div>
+          <div class="purpose-orb po2"></div>
+        </div>
         <div class="container reveal">
-          <span class="kicker">Our Purpose</span>
+          <span class="purpose-kicker">Our Purpose</span>
           <p class="purpose-line">Building technology for <em>happy, healthy, and highly affordable</em> senior communities.</p>
         </div>
       </section>
@@ -563,23 +567,27 @@
               Twenty-five years building technology for companies like AT&amp;T and IBM, then a decade as owner-operators. That road is why our products fit senior living so naturally.
             </p>
           </header>
-          <div class="story-timeline">
-            <div class="story-step reveal">
+          <div class="story-timeline reveal">
+            <div class="story-step">
+              <div class="story-img"><img src="Solutions Graphics/Story/era-1998.webp" alt="Stylized illustration of enterprise server towers" loading="lazy" /></div>
               <span class="story-year">1998</span>
               <h3>Fortune 100 roots</h3>
               <p>Decades leading large global technology teams and building solutions for Fortune 100 companies including AT&amp;T and IBM.</p>
             </div>
-            <div class="story-step reveal">
+            <div class="story-step">
+              <div class="story-img"><img src="Solutions Graphics/Story/era-2015.webp" alt="Stylized illustration of a growing real estate portfolio" loading="lazy" /></div>
               <span class="story-year">2015</span>
               <h3>Operating at scale</h3>
               <p>Rent Home Today grows into a $20 million real estate asset management business, with a board seat at the National Association of Realtors.</p>
             </div>
-            <div class="story-step reveal">
+            <div class="story-step">
+              <div class="story-img"><img src="Solutions Graphics/Story/era-2021.webp" alt="Stylized illustration of a senior living community" loading="lazy" /></div>
               <span class="story-year">2021</span>
               <h3>Becoming owner-operators</h3>
               <p>Highlands Senior Living, our first community. A Georgia-licensed administrator working with the Georgia Senior Living Association, seeing the technology gaps firsthand.</p>
             </div>
-            <div class="story-step reveal">
+            <div class="story-step">
+              <div class="story-img"><img src="Solutions Graphics/Story/era-2025.webp" alt="Stylized illustration of a product launch" loading="lazy" /></div>
               <span class="story-year">2025</span>
               <h3>Built for every operator</h3>
               <p>Seven senior living communities across three states, plus home care. Highlands AI Solutions launches to bring our in-house tools to the broader market.</p>
