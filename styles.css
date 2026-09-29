@@ -2594,3 +2594,107 @@ body.lb-lock { overflow: hidden; }
 @media (max-width: 640px) {
   .case-product-tag { display: none; }
 }
+
+/* =========================================================
+   WHY WE BUILT THIS — challenge grid (homepage)
+   ========================================================= */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.why-card {
+  position: relative;
+  padding: 1.6rem 1.5rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 300ms var(--ease), box-shadow 300ms var(--ease), border-color 300ms var(--ease);
+}
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(14, 185, 166, 0.3);
+}
+.why-icon {
+  display: grid; place-items: center;
+  width: 42px; height: 42px;
+  border-radius: 12px;
+  background: var(--brand-soft);
+  color: var(--brand-deep);
+  margin-bottom: 1rem;
+}
+.why-icon svg { width: 21px; height: 21px; }
+.why-card h3 { font-size: 1.08rem; margin-bottom: 0.45rem; }
+.why-card p { font-size: 0.93rem; color: var(--muted); line-height: 1.55; }
+@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .why-grid { grid-template-columns: 1fr; } }
+
+/* ===== Purpose strip ===== */
+.purpose-strip {
+  padding: 5.5rem 0;
+  text-align: center;
+}
+.purpose-strip .kicker { margin-bottom: 1.2rem; }
+.purpose-line {
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--ink);
+  max-width: 21ch;
+  margin: 0 auto;
+}
+.purpose-line em { color: var(--brand-deep); }
+
+/* =========================================================
+   OUR STORY — timeline (homepage)
+   ========================================================= */
+.story-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  margin-top: 1rem;
+}
+.story-timeline::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 2%; right: 2%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(14, 185, 166, 0.15), var(--brand) 50%, rgba(14, 185, 166, 0.15));
+}
+.story-step { position: relative; padding-top: 2.1rem; }
+.story-step::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--brand);
+  box-shadow: 0 0 0 5px var(--brand-soft);
+}
+.story-year {
+  display: block;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--brand-deep);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+.story-step h3 { font-size: 1.1rem; margin-bottom: 0.45rem; }
+.story-step p { font-size: 0.93rem; color: var(--muted); line-height: 1.55; }
+@media (max-width: 900px) {
+  .story-timeline { grid-template-columns: 1fr; gap: 2.25rem; padding-left: 0.5rem; }
+  .story-timeline::before {
+    top: 2%; bottom: 2%; left: 9px; right: auto;
+    width: 2px; height: auto;
+    background: linear-gradient(180deg, rgba(14, 185, 166, 0.15), var(--brand) 50%, rgba(14, 185, 166, 0.15));
+  }
+  .story-step { padding-top: 0; padding-left: 2.4rem; }
+}
