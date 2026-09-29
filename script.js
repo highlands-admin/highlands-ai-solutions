@@ -140,3 +140,51 @@ document.querySelectorAll('.hero-mock .chip').forEach((chip) => {
 
   setInterval(() => show((current + 1) % mocks.length), 4500);
 })();
+
+// Case study metrics — count up when the results rail scrolls into view
+(function initCaseCounters() {
+  const els = document.querySelectorAll('[data-count-to]');
+  if (!els.length) return;
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const format = (value, decimals) => {
+    const [int, frac] = value.toFixed(decimals).split('.');
+    const grouped = int.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return frac ? `${grouped}.${frac}` : grouped;
+  };
+
+  const run = (el) => {
+    const target = parseFloat(el.dataset.countTo);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    if (Number.isNaN(target)) return;
+    if (reduced) {
+      el.textContent = format(target, decimals);
+      return;
+    }
+
+    const duration = 1400;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      el.textContent = format(target * eased, decimals);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    el.textContent = format(0, decimals);
+    requestAnimationFrame(step);
+  };
+
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        obs.unobserve(e.target);
+        run(e.target);
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  els.forEach((el) => obs.observe(el));
+})();
