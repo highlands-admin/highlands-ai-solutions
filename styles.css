@@ -2124,3 +2124,298 @@ p { margin: 0; color: var(--ink-2); }
   }
   .scroll-mobile-pair .scroll-img img { width: 100%; max-height: none; }
 }
+
+/* =========================================================
+   CASE STUDY — split narrative card with dark results rail
+   ========================================================= */
+.section-case { background: linear-gradient(180deg, var(--bg-soft) 0%, transparent 65%); }
+
+.case-card {
+  display: grid;
+  grid-template-columns: 1.32fr 0.82fr;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- narrative side --- */
+.case-body {
+  padding: 3rem 3rem 2.75rem;
+  display: flex; flex-direction: column;
+}
+.case-client {
+  display: flex; align-items: center; gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.case-avatar {
+  flex-shrink: 0;
+  width: 50px; height: 50px;
+  display: grid; place-items: center;
+  border-radius: 15px;
+  background: linear-gradient(150deg, var(--brand), var(--brand-darker));
+  color: #fff;
+  font-weight: 800; font-size: 0.95rem; letter-spacing: -0.02em;
+  box-shadow: 0 10px 22px rgba(14, 185, 166, 0.28);
+}
+.case-client-name { font-weight: 700; color: var(--ink); line-height: 1.3; }
+.case-client-meta { font-size: 0.84rem; color: var(--muted); }
+.case-body h3 {
+  font-size: clamp(1.4rem, 2.1vw, 1.95rem);
+  line-height: 1.22;
+  margin-bottom: 2rem;
+  max-width: 32ch;
+}
+
+.case-steps {
+  list-style: none; margin: 0;
+  padding: 0 0 0 1.9rem;
+  display: grid; gap: 1.5rem;
+  position: relative;
+}
+.case-steps::before {
+  content: ''; position: absolute;
+  left: 5px; top: 0.6rem; bottom: 0.6rem;
+  width: 2px; border-radius: 2px;
+  background: linear-gradient(180deg, var(--brand), rgba(14, 185, 166, 0.14));
+}
+.case-step { position: relative; }
+.case-step::before {
+  content: ''; position: absolute;
+  left: -1.9rem; top: 0.3rem;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--surface);
+  border: 2.5px solid var(--brand);
+  box-shadow: 0 0 0 4px var(--brand-soft);
+}
+.case-step-label {
+  display: block;
+  font-size: 0.7rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--brand-deep);
+  margin-bottom: 0.4rem;
+}
+.case-step p { font-size: 0.96rem; color: var(--muted); }
+
+.case-chips {
+  display: flex; flex-wrap: wrap; gap: 0.45rem;
+  margin: 2.25rem 0 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+.case-chips span {
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--brand-darker);
+  background: var(--brand-soft);
+  border: 1px solid rgba(14, 185, 166, 0.18);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+}
+
+/* --- results rail --- */
+.case-results {
+  position: relative; overflow: hidden;
+  padding: 3rem 2.5rem 2.75rem;
+  background: linear-gradient(165deg, var(--night) 0%, #142334 100%);
+  display: flex; flex-direction: column;
+}
+.case-results::before {
+  content: ''; position: absolute;
+  top: -140px; right: -120px;
+  width: 340px; height: 340px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 185, 166, 0.30), transparent 70%);
+  pointer-events: none;
+}
+.case-results > * { position: relative; z-index: 1; }
+.case-results-label {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic; font-size: 1.3rem;
+  color: #7EE3D6;
+  margin-bottom: 1.6rem;
+}
+.case-metrics { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.35rem; }
+.case-metric { padding-bottom: 1.35rem; border-bottom: 1px solid rgba(255, 255, 255, 0.09); }
+.case-metric:last-child { padding-bottom: 0; border-bottom: none; }
+.case-metric-val {
+  display: flex; align-items: baseline;
+  font-size: clamp(1.9rem, 2.8vw, 2.35rem);
+  font-weight: 700; line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--brand);
+}
+.case-affix { font-size: 0.6em; font-weight: 700; letter-spacing: 0; }
+.case-affix-word { font-size: 0.48em; margin-left: 0.3em; }
+.case-metric-label {
+  margin-top: 0.5rem;
+  font-size: 0.92rem; font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+.case-metric-note { margin-top: 0.15rem; font-size: 0.78rem; color: rgba(255, 255, 255, 0.42); }
+.case-foot {
+  margin-top: auto; padding-top: 2rem;
+  font-size: 0.76rem; font-style: italic;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+@media (max-width: 960px) {
+  .case-card { grid-template-columns: 1fr; }
+  .case-body    { padding: 2.25rem 1.6rem 2rem; }
+  .case-results { padding: 2.25rem 1.6rem 2rem; }
+  .case-metrics { grid-template-columns: 1fr 1fr; gap: 1.6rem 1.25rem; }
+  .case-metric, .case-metric:last-child { padding-bottom: 0; border-bottom: none; }
+  .case-foot { padding-top: 1.6rem; }
+}
+@media (max-width: 520px) {
+  .case-metrics { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   TESTIMONIALS — featured serif quote + supporting voices
+   ========================================================= */
+.section-head-light h2 em { color: #7EE3D6; }
+
+.testimonial-feature {
+  max-width: 880px;
+  margin: 0 auto 3.25rem;
+  text-align: center;
+}
+.testimonial-mark {
+  display: block;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 4.5rem; line-height: 1;
+  color: var(--brand);
+  opacity: 0.55;
+  margin-bottom: -1.1rem;
+}
+.testimonial-feature blockquote {
+  margin: 0;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic; font-weight: 400;
+  font-size: clamp(1.45rem, 2.7vw, 2.15rem);
+  line-height: 1.34;
+  letter-spacing: -0.015em;
+  color: #f3faf7;
+}
+.testimonial-author {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+.t-avatar {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--brand), var(--brand-darker));
+  color: #fff; font-weight: 700; font-size: 0.85rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.t-name { font-weight: 700; font-size: 0.95rem; color: #fff; line-height: 1.3; }
+.t-role { font-size: 0.82rem; color: rgba(255, 255, 255, 0.6); }
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.testimonial-card {
+  display: flex; flex-direction: column; gap: 1.1rem;
+  padding: 1.75rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+  transition: transform 300ms var(--ease), background 300ms var(--ease), border-color 300ms var(--ease);
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(14, 185, 166, 0.35);
+}
+.t-quote-icon {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 2.1rem; line-height: 0.62; height: 0.7rem;
+  color: var(--brand);
+  opacity: 0.7;
+}
+.testimonial-card blockquote { margin: 0; }
+.testimonial-card p {
+  flex: 1;
+  font-size: 0.96rem; line-height: 1.65;
+  color: rgba(255, 255, 255, 0.80);
+}
+.testimonial-card .testimonial-author { display: flex; margin-top: 0; }
+.testimonial-card .t-avatar { width: 38px; height: 38px; font-size: 0.78rem; }
+
+@media (max-width: 960px) {
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial-feature { margin-bottom: 2.5rem; }
+}
+
+/* =========================================================
+   FEATURED SOLUTION CARD — spans the full grid width
+   ========================================================= */
+.sol-card-wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: stretch;
+}
+.sol-card-wide .sol-card-media {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 360px;
+  padding: 1.9rem;
+}
+/* App screenshots sit inside the media panel rather than filling it */
+.sol-card-img-contain {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.42);
+}
+.sol-card-wide .sol-card-body {
+  padding: 2.5rem 2.5rem 2.5rem;
+  justify-content: center;
+}
+.sol-card-wide .sol-features { grid-template-columns: 1fr 1fr; gap: 0.45rem 1.25rem; }
+
+.sol-badge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  z-index: 2;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(14, 185, 166, 0.28);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.74rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--brand-darker);
+}
+.sol-badge::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
+@media (max-width: 768px) {
+  .sol-card-wide { grid-template-columns: 1fr; }
+  .sol-card-wide .sol-card-media { aspect-ratio: 16 / 9; min-height: 0; padding: 1.1rem; }
+  .sol-card-wide .sol-card-body { padding: 1.75rem 1.85rem 2rem; }
+  .sol-card-wide .sol-features { grid-template-columns: 1fr; }
+}
+
+/* Four-up audience grid (Workflow360 roles) */
+.audience-grid-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1024px) {
+  .audience-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .audience-grid-4 { grid-template-columns: 1fr; }
+}
